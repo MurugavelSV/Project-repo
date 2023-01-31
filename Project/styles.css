@@ -1,0 +1,142 @@
+body{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background-color: rgba(225, 220, 220, 0.804);
+    margin-top: 3rem;
+    margin-bottom: 1rem;
+    margin-left: 5%;
+    margin-right: 5%;
+}
+
+header{
+    margin-bottom: 60px;
+}
+
+main{
+    margin-bottom: 60px;
+}
+
+header > div{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
+nav > ul{
+    list-style: none;
+    text-align: center;
+    background-image: linear-gradient(to right,rgb(121, 115, 115),rgb(0,0,0));
+    border-radius: 20px;
+}
+
+nav li{
+    display: inline-block;
+    padding: 23px;
+    margin-right: 30px;
+}
+
+a{
+    color: white;
+    text-decoration: none;
+}
+
+a:hover{
+    font-weight: bolder;
+}
+
+a:active{
+    color: khaki;
+}
+
+#flexAnnouncement{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.announcement{
+    flex: 1 1 auto;
+    margin-bottom: 50px;
+    border-radius: 20px;
+    color: white;
+    padding-left: 15px;
+    padding-right: 15px;
+    background-image: url("dish.jpeg");
+    background-size: cover;
+    background-position: 20%;
+    font-size: 14px;
+    font-weight:bold;
+}
+
+.announcement h1{
+    font-size: 35px;
+    text-shadow: 6px 1px black;
+}
+
+#gridArticle{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    column-gap: 20px;
+}
+
+article{
+    background-color:rgb(255, 166, 0);
+    border-radius: 30px;
+    padding: 15px;
+}
+
+article > img{
+    min-width: 10%;
+    max-width: 100%;
+}
+
+@media screen and (max-width: 847px) {
+    .announcement h1{
+        font-size: 30px;
+    }
+    .announcement{
+        font-size: 12px;
+    }
+}
+
+@media screen and (max-width: 523px){
+.announcement h1{
+    font-size: 25px;
+}
+.announcement{
+    font-size: 10px;
+}
+}
+
+@media screen and (max-width: 688px) {
+    article{
+        border-radius: 15px;
+}
+}
+
+footer{
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    padding: 9px;
+    border-radius: 25px;
+    background-image: linear-gradient(to right,rgb(121, 115, 115),rgb(0,0,0));
+}
+
+footer p{
+    animation: colorChange 15s linear;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+@keyframes colorChange {
+    0%{color: rgb(102, 96, 96);}
+    25%{color: rgb(225, 96, 49);}
+    50%{color: rgb(121, 189, 78);}
+    75%{color: rgb(173, 57, 200);}
+    100%{color: rgb(230, 125, 125);}
+}
+
+nav > ul:hover ,.announcement:hover, article:hover, footer:hover{
+    box-shadow: 2px 2px 30px gray;
+}
+
